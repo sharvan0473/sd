@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build image
+    name: deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,7 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
-      -name: Load secret and save app
+      - name: Load secret and save app
         run: aws secretsmanager get-secret-value --secret-id sinple_bank --query SecretString --output text | jq -r 'to_entries|map("\(.key)=\(.value)")|.[]'
 
       - name: Build, tag, and push docker image to Amazon ECR
