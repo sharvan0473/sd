@@ -10,8 +10,8 @@ func Add(x, y int) (res int) {
 
 func TestAdd(t *testing.T) {
 
-	got := Add(5, 5)
-	want := 10
+	got := Add(4, 4)
+	want := 8
 
 	if got != want {
 		t.Errorf("got %q, wanted %q", got, want)
