@@ -10,7 +10,7 @@ func Add(x, y int) (res int) {
 
 func TestAdd(t *testing.T) {
 
-	got := Add(4, 6)
+	got := Add(5, 5)
 	want := 10
 
 	if got != want {

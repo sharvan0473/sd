@@ -12,4 +12,5 @@ func NewStore(db *sql.DB) *Store {
 		db:      db,
 		Queries: New(db),
 	}
+
 }
